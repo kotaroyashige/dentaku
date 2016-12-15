@@ -1,13 +1,12 @@
 <?php
 
-if(isset($_POST['reset']))
-{$x=0;
+if(isset($_POST['reset'])) {
+    $x=0;
     $y=0;
-    $answer=0;}
-
-else if( empty($_POST['x']) && empty($_POST['y']) ){
+    $answer=0;
+} else if( empty($_POST['x']) && empty($_POST['y']) ){
     $x = $y = 0;
-}else{
+} else{
     $x = $_POST['x'];
     $y = $_POST['y'];
 }
@@ -27,8 +26,7 @@ if ($x === "") {
     $x = ""; $y = "";
 }
 
-if(isset($_POST['operator']))
-{
+if(isset($_POST['operator'])) {
     $ope=$_POST['operator'];
 
     switch ($ope) {
@@ -55,9 +53,8 @@ if(isset($_POST['operator']))
             }
             break;
     }
-}
-else {
-    $answer = '計算結果なし';
+} else {
+            $answer = '計算結果なし';
 }
 ?>
 
